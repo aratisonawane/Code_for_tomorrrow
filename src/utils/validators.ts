@@ -1,7 +1,3 @@
-/**
- * Validation utilities
- */
-
 export const validateUserId = (userId: any): number | null => {
   const parsed = typeof userId === 'string' ? parseInt(userId, 10) : userId;
   if (isNaN(parsed) || parsed <= 0) {

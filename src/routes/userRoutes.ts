@@ -4,7 +4,6 @@ import { UserController } from '../controllers/UserController';
 const router = Router();
 const userController = new UserController();
 
-// Async error handler wrapper
 const asyncHandler = (fn: (req: Request, res: Response) => Promise<void>) => {
   return (req: Request, res: Response, next: NextFunction) => {
     Promise.resolve(fn(req, res)).catch(next);
